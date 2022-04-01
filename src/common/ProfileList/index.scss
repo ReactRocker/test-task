@@ -1,0 +1,59 @@
+.profiles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+  transition: all 1s ease-out;
+}
+
+.profile {
+  border-radius: 5px;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 22.5rem;
+
+  &:hover {
+    .profile__details {
+      opacity: 1;
+      height: auto;
+    }
+  }
+
+  &__img-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__header {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+  }
+
+  &__details {
+    opacity: 0;
+    height: 0;
+    transition: all 1s ease-out;
+  }
+
+  &__name {
+    font-weight: 900;
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
